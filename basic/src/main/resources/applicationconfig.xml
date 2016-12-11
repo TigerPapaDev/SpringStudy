@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--以上都是套路-->
+<bean id="engine" class="com.monodev.springstudy.basic.beans.Engine" />
+    <bean id="wheel" class="com.monodev.springstudy.basic.beans.Wheel" />
+    <bean id="driver" class="com.monodev.springstudy.basic.beans.Driver" />
+    <bean id="car" class="com.monodev.springstudy.basic.beans.Car"  depends-on="driver">
+        <constructor-arg ref="engine"></constructor-arg>
+        <constructor-arg name="wheels"  >
+            <list>
+            </list>
+        </constructor-arg>
+        <property  name="driver" ref="driver"></property>
+    </bean>
+</beans>
