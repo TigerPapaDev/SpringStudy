@@ -14,6 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 public class ApplicationTest {
     @Test
-    public  void beanFactoryTest(){ 
+    public  void beanFactoryTest(){
     }
 }
